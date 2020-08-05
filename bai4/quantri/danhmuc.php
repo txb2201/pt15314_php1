@@ -44,7 +44,7 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <td><?= $c['description'] ?></td>
                     <td>
                         <a href="capnhat_danhmuc.php?id=<?= $c['cate_id'] ?>">Sửa</a> |
-                        <a href="xoa_danhmuc.php?id=<?= $c['cate_id'] ?>">Xóa</a>
+                        <a onclick="return confirm('Bạn có chắc chắn xóa không')" href="xoa_danhmuc.php?id=<?= $c['cate_id'] ?>">Xóa</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
